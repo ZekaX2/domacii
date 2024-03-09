@@ -1,0 +1,1021 @@
+#zad 1 
+'''
+unos = int(input("Unesite broj neki :"))
+if unos % 2 == 0 : 
+    print("Portal se otvara ")
+else:
+    print("Portal ostaje zatvoren ") 
+'''
+# zad 2 
+'''
+milos = int ( input ("Unesite koliko je Milos ubrao : "))
+petar = int(input("Unesite koliko je petar ubrao "))
+if milos > petar: 
+    print("Milos je ubrao vise. ")
+else : 
+    print ("Petar je ubrao vise. ")
+'''
+# zad 3
+''' 
+prisustvo= int(input("Unesite koliko procenata ima osoba : "))
+seminarski = int(input("Unesite da li ima sve seminarske,1 kao da, 0 ne"))
+if prisustvo  >= 75 and seminarski == 1 :
+    print ("Moze da polaze")
+else: 
+    print("Ne moze. ")  
+'''
+#zad 4 
+'''
+# zica y = 2 * x + 5
+x = int (input ("Unesite x "))
+y = int (input("Unesite y : "))
+
+if y == 2 * x + 5:
+    print("Krece se ") 
+else : 
+    print("Ne krece se ")
+'''
+#zad5 
+'''
+takmicar_jedan_matematika = int (input("Unesite koliko je bodova dobio na matematiku : "))
+takmicar_jedan_prog = int(input("Unesite koliko je bodova imao iz programiranja : "))
+takmicar_dva_matematika = int (input("Unesite koliko je bodova uzeo iz matematike : "))
+takmicar_dva_prog = int (input("Unesite koliko je bodova je uzeo iz programiranja "))
+zbir_prvi = takmicar_jedan_matematika + takmicar_jedan_prog
+zbir_drugi = takmicar_dva_matematika + takmicar_dva_prog
+
+if zbir_prvi > zbir_drugi:
+    print("Pobjednik je prvi ")
+elif zbir_prvi == zbir_drugi :
+    if takmicar_jedan_prog > takmicar_dva_prog:
+        print("Pobjednik je prvi. ")
+else:
+    print("Drugi je pobjednik. ")
+'''
+#zad 6 
+'''
+ocjena = float(input("Unesite prosjecnu ocjenu: "))
+
+if ocjena >= 4.5 :
+    print("Odlican")
+elif 3.5 >= ocjena < 4.5:
+    print("Vrlo dobar ")
+elif 2.5>= ocjena < 3.5:
+    print("Dobar")
+elif 2 >= ocjena <2.5:
+    print("Dovoljan")
+elif ocjena == 1 :
+    print("Nedovoljan.")
+else: 
+    print("Pogresan unos")
+'''
+#zad 7
+'''
+unos = int(input("Unesite dvocifreni broj "))
+prvi = unos // 10 
+drugi= unos %10 
+if prvi > drugi :
+    print (prvi - drugi)
+elif drugi > prvi :
+    print(prvi+drugi)
+else:
+    print(prvi*drugi)
+'''
+#zad8 
+'''
+polu_precnik_prvog = int (input("Unesite polu precnik prvog"))
+polu_precnik_drugog = int (input("Unesite polu precnik drugog"))
+pi = 3.14
+obim_prvi = polu_precnik_prvog*2 * pi 
+obim_drugi = polu_precnik_drugog *2 * pi
+
+if obim_prvi > obim_drugi:
+    print(obim_prvi)
+else:
+    print(obim_drugi)
+'''
+#zad 9 
+'''
+prvi = int(input("Unesite "))
+drugi = int(input("Unesite "))
+treci = int(input("Unesite "))
+
+prvi_drugi = prvi + drugi
+prvi_treci= prvi+ treci
+drugi_treci = drugi + treci
+
+if prvi_treci > prvi_drugi < drugi_treci:
+    print("Najmanji par je prvi i drugi ")
+elif prvi_drugi > prvi_treci < drugi_treci:
+    print("Najmanji je prvi i treci ")
+else : 
+    print("Najmanji je drugi i treci ")
+'''
+#zad 10
+'''
+godina = int(input("Unesite koja je godina "))
+
+if (godina % 4 == 0 and godina % 100 != 0) or (godina % 400 == 0):
+    print("Godina je prestupna. ")
+else: 
+    print("Nije")
+'''
+#zad 11 
+'''
+skolarina=int(input("Unesite skolarinu: "))
+prosjek=float(input("Unesite prosjecnu ocjenu od 2.0 do 5.00: "))
+nagrada=int(input("Unesite 0, ako nema nagrade sa drzavnog takmicenja,a 1 ako ima: "))
+if prosjek > 2.5:
+    if prosjek >= 4.5 and prosjek <= 5.0:
+        prosjek=0.4
+elif prosjek >= 3.5 and prosjek < 4.5:
+        prosjek=0.2
+elif prosjek >= 2.5 and prosjek < 3.5 :
+        prosjek=0.1
+else:
+    prosjek=0
+if nagrada == 1:
+    nagrada= skolarina * 0.3
+else:
+    nagrada=0
+print("Cijena skolarine je : ", int(skolarina-(skolarina*prosjek+nagrada)))
+'''
+#zad 12
+'''
+broj = int(input("Unesite četvorocifreni broj: "))
+cifra1 = (broj // 1000) % 10
+cifra2 = (broj // 100) % 10
+cifra3 = (broj // 10) % 10
+cifra4 = broj % 10
+
+if broj % 2 == 0: 
+    zbir_parnih = 0
+
+    if cifra1 % 2 == 0:
+        zbir_parnih += cifra1
+    if cifra2 % 2 == 0:
+        zbir_parnih += cifra2
+    if cifra3 % 2 == 0:
+        zbir_parnih += cifra3
+    if cifra4 % 2 == 0:
+        zbir_parnih += cifra4
+
+    print("Broj je paran, zbir parnih cifara je:", zbir_parnih)
+else:
+    proizvod_neparnih = 1
+
+    if cifra1 % 2 != 0:
+        proizvod_neparnih *= cifra1
+    if cifra2 % 2 != 0:
+        proizvod_neparnih *= cifra2
+    if cifra3 % 2 != 0:
+        proizvod_neparnih *= cifra3
+    if cifra4 % 2 != 0:
+        proizvod_neparnih *= cifra4
+
+    print("Broj je neparan, proizvod neparnih cifara je:", proizvod_neparnih)
+'''
+#zad 13
+'''
+x=int(input("Unesite X: "))
+if x <= -7:
+    y= -2*x + (7/2)
+elif -7 <= x < 1:
+    y=(x**2-3*x+5)/x**2 +2
+elif 1 <= x <= 8:
+    y=(x**2 + 2* x +2)**0.5 + abs(((3/2*x)-4/7 )**0.5)
+elif x > 8:
+    y=(abs((3/x**2)-11*x))
+else:
+    print("Cuvaj se!")
+print("Za dato X, y vrijednost iznosi:",int(y))
+'''
+#zad 14 
+'''
+x=int(input("Unesite X koordinatu: "))
+y=int(input("Unesite Y koordinatu: "))
+if x > 0 and y > 0:
+    print("Pripada prvom kvadrantu")
+elif x<0 and y > 0 :
+    print("Pripada drugom kvadrantu")
+elif x<0 and y<0 :
+    print("Pripada trecem kvadrantu")
+else:
+    print("Pripada cetvrtom kvadrantu")
+'''
+#zad 15
+'''
+
+tekst = input("Unesite tekst: ")
+skratit=int(input("Unesite na koliko karaktera zelite da skratite tekst: "))
+duzina = len(tekst)
+ 
+if duzina > skratit or duzina<skratit:
+    skraceni_tekst = tekst[:skratit] + "..."
+    print(skraceni_tekst)
+
+'''
+#zad 16
+'''
+sifra=input("Unesite sifru: ")
+
+if  8 >= len(sifra) > 100 :
+    rezultat = "NO"
+else:
+    mala_slova = False
+    brojac = 0 
+
+    while brojac < len(sifra):
+        if sifra[brojac].islower():
+            mala_slova = True
+            break
+        brojac += 1
+
+    velika_slova = False
+    brojac = 0 
+
+    while brojac < len(sifra):
+        if sifra[brojac].isupper():
+            velika_slova = True
+            break
+        brojac += 1
+
+    cifre = False
+    brojac = 0
+
+    while cifre < len(sifra):
+        if sifra[cifre].isdigit():
+            has_cifre = True
+            break
+        brojac += 1
+ 
+    if mala_slova and velika_slova and has_cifre:
+        rezultat = "YES"
+    else:
+        rezultat = "NO"
+
+print(rezultat)
+'''
+# zad 1 7
+'''
+rezultat = input("Unesite rezultate:") 
+broj_golova = 0
+brojac = 0
+
+while brojac < len(r
+ezultat):
+  if rezultat[brojac] != ':' and rezultat[brojac] != ',':
+    broj_golova += int(rezultat[brojac])
+
+  brojac += 1
+
+print(broj_golova)
+'''
+# zad 18 
+'''
+s = input("Unesite string sastavljen od karaktera 0 i 1: ")
+pozicija = int(input("Unesite poziciju za provjeru: "))
+
+duzina = len(s)
+rezultat = ""
+
+if pozicija == 0:
+    if s[pozicija + 1] == '0':
+        rezultat = "0"
+elif pozicija == duzina - 1:
+    if s[pozicija - 1] == '0':
+        rezultat = "0"
+else:
+    indeks = pozicija - 1
+    while indeks <= pozicija + 1:
+        if s[indeks] == '0':
+            rezultat = "0"
+            break
+        indeks += 2  
+
+print(rezultat)
+'''
+#zad 19
+'''
+h = int(input("Unesite koliko vodonika: "))
+o = int(input("Unesite koliko kiseonika: "))
+koliko_moze = h // 2 if h // 2 < o else o
+print(koliko_moze)
+'''
+#zad 20 
+'''
+ulaz = input("Unesite broj za koji želite da provjerite da li je Narcisstic: ")
+broj = int(ulaz)
+
+duzina = len(ulaz)
+brojac = 0
+zbir_cifara = 0
+
+while brojac < duzina:
+    cifra = int(ulaz[brojac])
+    zbir_cifara += cifra ** duzina
+    brojac += 1
+
+if zbir_cifara == broj:
+    print("Da.")
+else:
+    print("Ne.")
+'''
+#zad 21 
+'''
+koord_x_strelica=int(input("Unesite koordinatu strelice x : "))
+koord_y_strelica=int(input('Unesite koordinatu strelice y :'))
+koord_x_centar=int(input("Unesite koordinatu centra x : "))
+koord_y_centar=int(input("Unesite koordinatu centra y : "))
+poluprecnik=int(input("Unesite poluprecnik: "))
+
+udaljenost = ((koord_x_centar - koord_x_strelica)**2 + (koord_y_centar - koord_y_strelica)**2) ** 0.5
+if udaljenost <= poluprecnik:
+    print("Pogodila je!")
+else: 
+    print("Nije")
+'''
+#zad 22 
+'''
+tacka_x = int(input("Unesite x koordinatu tacke: "))
+tacka_y = int(input("Unesite y koordinatu tacke: "))
+
+x_gornji_lijevi = int(input("Unesite x koordinatu gornjeg lijevog tjemena pravougaonika: "))
+y_gornji_lijevi = int(input("Unesite y koordinatu gornjeg lijevog tjemena pravougaonika: "))
+x_donji_desni = int(input("Unesite x koordinatu donjeg desnog tjemena pravougaonika: "))
+y_donji_desni = int(input("Unesite y koordinatu donjeg desnog tjemena pravougaonika: "))
+
+if  x_gornji_lijevi <= tacka_x <= x_donji_desni and y_donji_desni <= tacka_y <= y_gornji_lijevi:
+    print("Tačka se nalazi.")
+else:
+    print("Tačka se ne nalazi. ")
+'''
+#zad 23 
+'''
+x1_zavjese=int(input("Unesite x1 zavjese"))
+y1_zavjese=int(input("Unesite y1 zavjese"))
+x2_zavjese=int(input("Unesite x2 zavjese"))
+y2_zavjese=int(input("Unesite y2 zavjese"))
+x1_prozor=int(input("Unesite x1 prozor"))
+y1_prozor=int(input("Unesite y1 prozor"))
+x2_prozor=int(input("Unesite x2 prozor"))
+y2_prozor=int(input("Unesite y2 prozor"))
+
+a= x2_prozor - x1_prozor
+b= y2_prozor - y1_prozor
+
+a_z= x2_zavjese - x1_zavjese
+b_z= y2_zavjese - y1_zavjese
+
+p_z= a_z * b_z
+p_p= a*b
+
+if p_z >= p_p:
+    print("MOZE")
+else: 
+    print("Ne moze")
+'''
+#zad 24 
+'''
+a_lijevo_donje = int(input("Unesite koordinate a lijevo donje: "))
+b_lijevo_donje = int(input("Unesite koordinate b lijevo donje: "))
+a_desno_gornje = int(input("Unesite koordinate desno gornje: "))
+b_desno_gornje = int(input("Unesite koordinate desno gornje: "))
+a_mrav = int(input("Unesite koordinate x mrava: "))
+b_mrav = int(input("Unesite koordinate y mrava: "))
+ivica = (
+    (a_lijevo_donje == a_mrav or a_desno_gornje == a_mrav) and
+    (b_lijevo_donje <= b_mrav <= b_desno_gornje) or
+    (b_lijevo_donje == b_mrav or b_desno_gornje == b_mrav) and
+    (a_lijevo_donje <= a_mrav <= a_desno_gornje)
+)
+if ivica:
+    rezultat = "Mrav se kreće po ivici stola."
+else:
+    rezultat = "Mrav se ne kreće po ivici stola."
+
+print(rezultat)
+'''
+#zad 25 
+'''
+tekst=input("Unesite tekst: ")
+novitekst=tekst[1:-1]
+print(novitekst)
+'''
+#zad 26 
+'''
+broj=input("Unesite nesto: ")
+if broj.startswith("0b"):
+    print(f"Unos koji ste upisali je {broj} i on je binarni tip broja. ")
+elif broj.startswith("0o"):
+    print(f"Unos koji ste upisali je {broj} i on je oktalni tip broja.")
+elif broj.startswith("0x"):
+    print(f"Unos koji ste upisali je {broj} i on je heksadecimalni tip broja.")
+else:
+    print(f"Unos koji ste unijeli je {broj} i on je dekadni tip broja.")
+
+'''
+#zad 27 
+'''
+tekst=input("Unesite tekst: ")
+if 'a' in tekst or 'e' in tekst or 'i' in tekst or  'o' in tekst or  'u' in tekst :
+    print("Ima samoglasnika.")
+else: 
+    print("Nema.")
+'''
+#zad 28 
+'''
+tekst=input("Unesite tekst: ")
+target=input("Unesite target: ")
+if tekst.endswith(target):
+    print("DA")
+else:
+    print("Ne")
+'''
+#zad 29
+'''
+broj = input("Unesite broj: ")
+binaran = True
+nula = 0 
+while nula < len(broj): 
+
+    if broj[nula] != '0' and broj[nula] != '1':
+
+        binaran = False
+        break
+    nula += 1 
+if binaran:
+    print("Uneseni broj je binarni.")
+else:
+    print("Uneseni broj nije binarni.")
+'''
+#zad 30 
+'''
+start =int(input("Unesite broj pocetka segmenta : "))
+end = int (input("Unesite kraj segmenta: "))
+suma = 0 
+for broj in range(start,end + 1): 
+    if broj % 2 == 0 and broj % 4 != 0: 
+        kvadrat=broj*broj 
+        suma += kvadrat 
+        
+'''
+#zad 31
+'''
+unos = input("Unesite string ")
+enkript = ""
+
+for broj in unos :
+    if broj.isdigit():
+        broj = int(broj)
+        if broj %2 == 0:
+            enkript += "0"
+        else :
+            enkript +="1"
+    
+print(enkript)    
+'''
+#zad 32
+'''
+temperatura=int(input("Unesite temperaturu: "))
+if 0 < temperatura < 100:
+    print("Stanje je tecno.")
+elif temperatura <= 0:
+    print("Stanje je cvrsto")
+elif temperatura >= 100 :
+     print("Stanje je gasovito. ")
+else: 
+    print("Pogresne vrijednosti.")
+'''        
+#zad 33 
+'''
+start = int(input("Unesite od kojeg broja: "))
+end = int(input("Unesite do kojeg broja: "))
+suma = 0
+
+brojac = start
+
+while brojac <= end:
+    if brojac % 3 == 0 and brojac % 6 != 0:
+        suma += brojac ** 2
+    brojac += 1
+
+print(f"Suma kvadriranih brojeva je: {suma}")
+'''
+#zad 34 
+'''
+
+ulaz = input("Unesite tekst: ")
+izlaz = ""
+
+indeks = 0
+duzina = len(ulaz)
+
+while indeks < duzina:
+    veliko = ulaz[indeks]
+
+    if veliko.isupper():
+        izlaz += veliko
+
+    indeks += 1
+
+print(f"Novi string sa velikim slovima: {izlaz}")
+'''
+#zad 35 
+'''
+ulaz = input("Unesite string sa heksadecimalnim brojevima: ")
+brojac = 0
+
+indeks = 0
+duzina = len(ulaz)
+
+while indeks < duzina:
+
+    while indeks < duzina and ulaz[indeks].isspace():
+        indeks += 1
+    
+    if indeks + 1 < duzina and ulaz[indeks] == '0' and ulaz[indeks + 1] == 'x':
+        brojac += 1
+        indeks += 2 
+
+    while indeks < duzina and not ulaz[indeks].isspace():
+        indeks += 1
+
+print(f"Broj heksadecimalnih brojeva: {brojac}")
+'''
+# zad 36
+'''
+ulaz = input("Unesite string sa prazninama: ")
+
+start= ""
+najduza = ""
+
+indeks = 0
+duzina = len(ulaz)
+
+while indeks < duzina:
+    karakter = ulaz[indeks]
+
+    if karakter != ' ':
+        start += karakter
+    else:
+        if len(start) > len(najduza):
+            najduza = start
+        start = ""
+
+    indeks += 1
+
+# Provera poslednje reči u slučaju da je najduža
+if len(start) > len(najduza):
+    najduza = start
+
+print(f"Najduža reč u stringu: {najduza}")
+'''
+#zad 37
+'''
+broj=int(input("Unesite petocifreni broj : "))
+cifra1=(broj//10000)%10
+cifra2=(broj//1000)%10
+cifra3=(broj//100)%10
+cifra4=(broj//10)%10
+cifra5=(broj%10)
+aritmeticka_sredina=int((cifra1+cifra2+cifra3+cifra4+cifra5) / 5 )
+print(f"Aritmeticka sredina cifara broja {broj} je {aritmeticka_sredina}")
+'''
+#zad 38 
+'''
+broj = int(input("Unesite neki broj: "))
+
+if broj > 1:
+    if broj == 2 or broj == 3 or broj == 5 or broj == 7:
+        print(f"Broj {broj} je prost")
+    elif broj % 2 == 0 or broj % 3 == 0 or broj % 5 == 0 or broj %7 == 0:
+        print(f"Broj {broj} nije prost")
+    else:
+        print(f"Broj {broj} je prost")
+else:
+    print(f"Broj {broj} nije prost")
+    '''
+# zad 39 
+
+'''
+a = int(input("Unesite broj pocetka segmenta: "))
+b = int(input("Unesite kraj segmenta: "))
+c= int(input("Unesite sa cime zelite da dijelite: "))   
+suma = 0 
+djelilac = 0 
+for broj in range(a + 1, b ): 
+    if broj % c == 0: 
+        djelilac += 1  
+        suma += broj 
+
+print(djelilac, suma)
+'''
+# zad 40 
+'''
+unos = input("Unesite niz karaktera: ")
+proizvod = 1 
+
+for c in unos: 
+    if c.isdigit(): 
+        cifra = int(c) 
+        proizvod *= cifra 
+print(proizvod)
+'''
+#zad 41 
+'''
+unos=input("Unesite nesto: ")
+kriptovan=""
+
+for elem in unos:
+    if elem in "aeiou":
+        kriptovan+='1'
+    else:
+        kriptovan+='0'
+        
+print(kriptovan)
+'''
+#zad 42 
+'''
+lista=[-2,7,-5,3,1,-4]
+suma=0
+# output treba da bude 6(-2+-4)
+for eleme in lista:
+    if eleme < 0 and eleme % 2 == 0: 
+        suma = suma + (eleme * (-1))
+print (suma)
+'''
+#zad 43 
+'''
+cijena=[5,20,1,3,5,2]
+zarada= 0 
+posle_popusta=0 
+popust=int(input("Unesite popust: "))
+for cijene in cijena:
+    if cijene > 0:
+        zarada+=cijene
+
+for elem in cijena:
+    if elem > 0:
+        posle_popusta +=  elem * (popust/100)
+
+posle_popusta= zarada - posle_popusta
+        
+print(zarada)
+print(posle_popusta)
+'''
+# zad 44
+'''
+
+plate =[500,600,700]
+suma=0 
+prosjecna= 0 
+iznad_prosjeka=0
+broj_zaposlenih=0
+for elem in plate:
+    if elem > 0:
+        suma+=elem
+        broj_zaposlenih+=1
+prosjecna = suma / broj_zaposlenih
+for elem in plate: 
+    if elem > prosjecna:
+        iznad_prosjeka+=1
+
+print(iznad_prosjeka,prosjecna)
+'''
+#zad 45
+'''
+posjete = [2, 3, 4, 20]
+maksimalne_posjete = 0
+
+for posjeta in posjete:
+    if posjeta > maksimalne_posjete:
+        maksimalne_posjete = posjeta
+
+print(f"Najviše posjeta u jednom danu: {maksimalne_posjete}")
+'''
+#zad 46 
+'''
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+zbir_kvadrata_djeljivih_sa_3 = 0
+
+for broj in lista:
+    if broj % 3 == 0:
+        zbir_kvadrata_djeljivih_sa_3 += broj ** 2
+
+print("Zbir kvadrata elemenata liste djeljivih sa 3:", zbir_kvadrata_djeljivih_sa_3)
+'''
+#zad 47 
+'''
+lista = [2,4,9,10,302,20]
+nova= []
+
+for i in lista : 
+    if (i**0.5)% 1 == 0:
+        nova.append(i)
+print (len(nova))
+'''
+#zad 48
+'''
+itemi = ["lol","rofl","isus","damir"]
+
+index = int (input("Unesite neki broj od 1 do 4 :"))
+
+print(itemi[index-1])
+'''
+#zad 49 
+'''
+lista = [1,3,4,2,5,6,7,22]
+
+if lista.sort():
+    print(True)
+else:
+    print(False)
+'''
+#zad 50 
+'''
+lista = [2, 421, 321, 32, 21, 999]
+lista.sort()
+drugi = lista[-2]
+print(drugi)
+'''
+#zad 51 
+'''
+lista = [1, 1, 4, 5, 6]
+suprotni = []
+unos = int(input("Unesite neki broj: "))
+
+for i in lista:
+    suprotna_vrijednost = unos 
+    if suprotna_vrijednost in lista and suprotna_vrijednost != i and suprotna_vrijednost != unos:
+        suprotni.append(i)
+
+broj_suprotnih = len(suprotni)
+
+print("Broj elemenata s suprotnom vrijednosti od unesenog broja:", broj_suprotnih)
+'''
+#zad 52 
+'''
+lista = [ 2,3,5,1]
+prosla= 0
+porast = []
+pad = []
+
+for cijena in lista :
+    if cijena > prosla:
+        porast.append(cijena-prosla)
+    elif cijena < prosla:
+        pad.append(prosla-cijena)
+    prosla = cijena
+
+porast.sort()
+pad.sort()
+print(pad[-1],porast[-1])
+'''
+#zad 53 
+'''
+slobodna_mjesta = [10, 8, 15, 12, 7]
+n = int(input("Unesite broj osoba: "))
+
+najbolji_red = 1  
+najbolji_broj_mjesta = slobodna_mjesta[0] - n  
+
+for i in range(1, len(slobodna_mjesta)):
+    broj_mjesta = slobodna_mjesta[i] - n
+    if broj_mjesta > najbolji_broj_mjesta:
+        najbolji_broj_mjesta = broj_mjesta
+        najbolji_red = i + 1  
+
+print(najbolji_red)
+'''
+#zad 54
+'''
+cijena = [200,300,400,600,220,3200,400,999,100]
+nova_lista=[]
+
+budzet = int (input("Unesite max budzet : "))
+
+for i in range(1,len(cijena)):
+    
+    max = cijena[i]-budzet
+    nova_lista.append(max)
+
+print(nova_lista)
+
+'''
+#zad 55
+'''
+kapaciteti = [4,6,2,8,5]
+gosti = int (input("Unesite koliko dolazi gostiju: "))
+zbir = 0
+for i in kapaciteti: 
+    zbir+= i 
+
+ukupno = zbir - gosti
+
+broj_stolova= (ukupno // 4 ) * ( -1)
+print(broj_stolova) 
+'''
+#zad 56
+'''
+mjesta = [20, 30, 10, 8, 10]
+n = int(input("Koliko će doći posjetitelja: "))
+
+mjesta.sort()  # Sortiramo mjesta u rastućem redoslijedu
+
+broj_redova = 0
+slobodna_mjesta = 0
+
+for broj_sjedala_u_redu in mjesta:
+    slobodna_mjesta += broj_sjedala_u_redu
+    broj_redova += 1
+
+    if slobodna_mjesta >= n:
+        break
+
+print(f"Potrebno je rezervirati {broj_redova} redova.")
+'''
+#zad 57 
+'''
+a1 = [1, 2, 3]
+max1 = 3
+count1 = 0
+
+for element in a1:
+    if element < max1:
+        count1 += 1
+
+print("Output 1:", count1)
+'''
+# zad 58 
+'''
+a2 = [2, 3, 4]
+max2 = 7
+count2 = 0
+
+for element in a2:
+    if element < max2:
+        count2 += 1
+'''
+# zad 59 
+'''
+a1 = [1, 2, -1, 3, -4]
+x1 = 3
+
+for i in range(len(a1)):
+    if a1[i] % 2 == 0:
+        a1[i] += x1
+
+print(a1)
+'''
+#zad 60 
+'''
+a2 = [21, 10, -10, 100]
+x2 = 5
+
+for i in range(len(a2)):
+    if a2[i] % 2 == 0:
+        a2[i] += x2
+
+print(a2)
+'''
+# zad 61 
+'''
+ulazni_string = input("Unesite string: ")
+slovo = input("Unesite slovo koje želite izostaviti: ")
+
+rijeci = ulazni_string.split()
+rezultat = []
+
+for rijec in rijeci:
+    if len(rijec) % 2 == 0 and slovo not in rijec:
+        rezultat.append(rijec)
+
+print(rezultat)
+'''
+#zad 62 
+'''
+ulazni_string1 = "danas polažemo test"
+broj1 = 5
+rezultat1 = []
+
+for i in range(0, len(ulazni_string1), broj1):
+    podstring = ulazni_string1[i:i+broj1]
+    if len(podstring) < broj1:
+        podstring += '*' * (broj1 - len(podstring))
+    rezultat1.append(podstring)
+
+print(rezultat1)
+'''
+# zad 63 
+'''
+ulazni_string3 = "da"
+broj3 = 7
+rezultat3 = []
+
+for i in range(0, len(ulazni_string3), broj3):
+    podstring = ulazni_string3[i:i+broj3]
+    if len(podstring) < broj3:
+        podstring += '*' * (broj3 - len(podstring))
+    rezultat3.append(podstring)
+
+print( rezultat3)
+'''
+#zad 64 
+'''
+N = int(input ( " Unesite sa koliko eura raspolazete : "))
+X1 = int (input(" Cijena akcije je juce bila : "))
+x2 = X1* 1.15  
+akcije_kupiti= N / x2 
+print (" Moze da se kupi ovoliko akcija : ", akcije_kupiti)
+'''
+# zad 65 
+'''
+ulaz = input("Unesite sto ste radili: ")
+ulaz1 = ulaz.split() 
+sale = 0
+buy = 0
+
+for i in ulaz1:
+    if i.startswith('S') and i[1:].isdigit():
+        sale += int(i[1:])
+    elif i.startswith('B') and i[1:].isdigit():
+        buy += int(i[1:])
+
+balans = sale - buy
+print("Balans", balans)
+'''
+# zad 66 
+'''
+ulaz = input("Unesite string sa heksadecimalnim brojevima: ")
+brojac = 0
+
+indeks = 0
+duzina = len(ulaz)
+
+while indeks < duzina:
+
+    while indeks < duzina and ulaz[indeks].isspace():
+        indeks += 1
+    
+    if indeks + 1 < duzina and ulaz[indeks] == '0' and ulaz[indeks + 1] == 'x':
+        brojac += 1
+        indeks += 2 
+
+    while indeks < duzina and not ulaz[indeks].isspace():
+        indeks += 1
+
+print(f"Broj heksadecimalnih brojeva: {brojac}")
+'''
+# zad 67
+'''
+ulazno_vreme = "05:00"
+sati_str, minute_str = ulazno_vreme.split(':')
+
+sati = int(sati_str)
+minute = int(minute_str)
+vreme_u_minutama = sati * 60 + minute
+
+polazak_autobusa = 6 * 60
+
+vrijeme_za_spavanje = polazak_autobusa - vreme_u_minutama - 5
+
+print("Output:", vrijeme_za_spavanje)
+'''
+# zad 68 
+'''
+cijene_destinacija = [100, 200, 300, 400, 500]
+budzet = 1000
+
+najskuplja_destinacija = max(cijene_destinacija)
+
+preostali_budzet = budzet - najskuplja_destinacija
+
+print("Preostali budžet nakon putovanja:", preostali_budzet)
+'''
+#zad 69 
+'''
+lista = [1, 2, 3, 2, 4, 2]
+
+element_za_zamjenu = 2
+novi_element = -2
+
+for i in range(len(lista)):
+    if lista[i] == element_za_zamjenu:
+        lista[i] = novi_element
+
+print("Nova lista:", lista)
+'''
+# zad 70 
+'''
+plate_u_eurima = [2000, 2500, 3000, 3500, 4000]
+EUR_TO_USD = 1.1
+suma_plata = 0
+broj_zaposlenih = len(plate_u_eurima)
+
+for plata in plate_u_eurima:
+    suma_plata += plata
+
+prosjecna_plata_u_dolarima = (suma_plata * EUR_TO_USD) / broj_zaposlenih
+print("Prosječna plata u dolarima:", prosjecna_plata_u_dolarima)
+'''
